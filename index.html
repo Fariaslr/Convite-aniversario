@@ -10,153 +10,15 @@
     
     <!-- Google Fonts: Cinzel (Sofisticação Arquitetônica), Plus Jakarta Sans (UI Limpa) e JetBrains Mono (Código) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: {
-                            950: '#050811',
-                            900: '#080E20',
-                            800: '#0D1630',
-                            700: '#152244',
-                            600: '#1E305E'
-                        },
-                        gold: {
-                            100: '#FBF6E9',
-                            200: '#F3E5AB',
-                            300: '#E6C762',
-                            400: '#D4AF37',
-                            500: '#B89225',
-                            600: '#8F6F16'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Cinzel', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        :root {
-            --bg-deep: #050811;
-            --bg-navy: #080E20;
-            --bg-card: #0D1630;
-            --gold-primary: #D4AF37;
-            --gold-light: #F3E5AB;
-            --gold-dark: #9A7B1C;
-        }
-
-        body {
-            background-color: var(--bg-deep);
-            color: #E2E8F0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
-                radial-gradient(circle at 85% 80%, rgba(13, 22, 48, 0.8) 0%, transparent 50%),
-                linear-gradient(180deg, #050811 0%, #080E20 50%, #050811 100%);
-        }
-
-        /* Textura sutil fosca */
-        .matte-surface {
-            background: linear-gradient(145deg, rgba(13, 22, 48, 0.92) 0%, rgba(8, 14, 32, 0.97) 100%);
-            backdrop-filter: blur(12px);
-            box-shadow: 
-                0 25px 50px -12px rgba(0, 0, 0, 0.75),
-                0 0 0 1px rgba(212, 175, 55, 0.22),
-                inset 0 1px 0 0 rgba(243, 229, 171, 0.12);
-        }
-
-        /* Gradiente Metálico Dourado para Textos */
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 45%, #AA821A 75%, #F3E5AB 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-        }
-
-        /* Botão Dourado Metálico */
-        .btn-gold {
-            background: linear-gradient(135deg, #E2C15A 0%, #D4AF37 50%, #B38B1D 100%);
-            color: #050811;
-            font-weight: 700;
-            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            filter: brightness(1.06);
-        }
-
-        .btn-gold:active {
-            transform: translateY(0);
-        }
-
-        /* Borda Dourada Refinada */
-        .gold-border-glow {
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            transition: all 0.25s ease;
-        }
-        .gold-border-glow:focus-within, .gold-border-glow:hover {
-            border-color: rgba(212, 175, 55, 0.75);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
-        }
-
-        /* Animação sutil nos circuitos */
-        @keyframes pulseGold {
-            0%, 100% { opacity: 0.35; }
-            50% { opacity: 0.75; }
-        }
-
-        .circuit-pulse {
-            animation: pulseGold 5s infinite ease-in-out;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #050811;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1E305E;
-            border-radius: 4px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
-
-        /* Animação de entrada de acompanhantes */
-        @keyframes slideDownFade {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .companion-card-enter {
-            animation: slideDownFade 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-    </style>
+    
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-gold-400 selection:text-navy-950">
 
